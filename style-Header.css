@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width:1200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2%;
+    user-select: none;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 600;
+}
+
+.header-ele1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header-ele1 img{
+    height: 80px;
+    width: 80px;
+}
+
+.header-ele1 p{
+    position: relative;
+    top: 50%;
+    left:-15%;
+}
+
+.header-ele2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    gap: 5%;
+}
+
+.header-ele2 a{
+    text-decoration: none;
+    color: black;
+    transition: font-weight 0.1s;
+}
+
+.header-ele2 a:hover{
+    font-weight: 700;
+}
+
+@media (max-width: 1199px){
+    .container{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+    }
+}

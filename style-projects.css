@@ -1,0 +1,208 @@
+.projects{
+    width:100vw;
+    height:2700px;
+    background-color: rgb(231,231,231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    position: relative;
+    left: 50%; /* Start from the middle */
+    transform: translateX(-50%); /* Center it */
+}
+
+.projects h2{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 4em;
+    color: #e84949;
+    font-weight: bold;
+}
+
+.pr1{
+    height: 550px;
+    width: 1080px;
+    border: 1px solid black;
+    position: relative;
+    left: -5%;
+    box-shadow: 0px 0px 40px #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    margin-bottom: 80px;
+    border: 0;
+}
+
+.pr1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/projects/Project1.png");
+    background-size: cover;
+    filter: brightness(50%);
+    z-index: 1;
+}
+
+.lefttoright{
+    position: absolute;
+    height: 100%;
+    top:0;
+    left: 0;
+    width: 0%;
+    opacity: 30%;
+    background-color: rgb(79, 67, 113);
+    transition: width 1s linear;
+    z-index: 10;
+}
+
+.lefttorighttext{
+    position: absolute;
+    top: -2%;
+    right: -4%;
+    color: white;
+    font-size: 7em;
+    z-index: 11;
+    opacity: 0%;
+    transition: opacity 0.5s linear, color 0.5s linear;
+}
+.pr1:hover .lefttoright{
+    width:100%;
+}
+.pr1:hover .lefttorighttext{
+    opacity: 100%;
+}
+
+.pr2, .pr4{
+    left: 0%;
+    right:5%;
+}
+
+.pr2::before{
+    background-image: url("images/projects/Project2.png");
+    background-size: cover;
+}
+
+.pr4::before{
+    background-image: url("images/projects/Project4.png");
+    background-size: cover;
+}
+
+.pr3::before{
+    background-image: url("images/projects/Project3.png");
+    background-size: cover;
+}
+
+.itemsProject{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 20;
+    width: 500px;
+    gap:5px;
+}
+
+.row1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.row1 img{
+    height:40px;
+    width:40px;
+    transition: all 0.5s ease-in-out;
+}
+
+.row1 img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.row4 img:hover{
+    transform: scale(1.2);
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="red"/></svg>');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.row2 p{
+    color: white;
+    font-size: 3.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+.row2 p:hover{
+    color: orange;
+}
+
+.row3 p{
+    color: white;
+    font-size: 1em;
+    font-style: italic;
+}
+
+.row4{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;   
+}
+
+.row4 button{
+    height: 35px;
+    width: 170px;
+    color: white;
+    background-color: #e84949;
+    border: 0px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.row4 button:hover{
+    background-color: #ed3636;
+}
+
+.row4 img{
+    filter: invert(1);
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width:1080px){
+    .pr1{
+        width: 100%;
+        left: 0%;
+        right: 0%;
+        height:300px;
+    }
+
+
+    .row1 img, .row4 img{
+        height:20px;
+        width: 20px;
+    }
+
+    .row4 button{
+        height: 25px;
+        width: 120px;   
+        font-size: 0.5em;     
+    }
+
+    .row2 p{
+        font-size: 2em;
+    }
+    .row3 p{
+        font-size: 0.5em;
+    }
+
+    .projects{
+        height: 1700px;
+    }
+}
